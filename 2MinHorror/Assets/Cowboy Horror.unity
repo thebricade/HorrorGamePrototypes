@@ -586,7 +586,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.6698113, g: 0.5955811, b: 0.54027236, a: 1}
   m_Intensity: 0.57
-  m_Range: 3.4
+  m_Range: 4.21
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -678,8 +678,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.990566, g: 0.58048755, b: 0, a: 0.46666667}
-  m_Intensity: 3.66
-  m_Range: 2.21
+  m_Intensity: 0.23
+  m_Range: 11.05
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -761,15 +761,15 @@ MonoBehaviour:
   scatteringBias: 0
   useColorTemperatureTint: 0
   overrideColor: 1
-  overridingColor: {r: 0.999999, g: 0.856325, b: 0.7421717, a: 1}
+  overridingColor: {r: 0.999999, g: 0.8450155, b: 0.6655537, a: 1}
   useShadow: 1
   useCookie: 1
   cookieMapRenderTexture: {fileID: 0}
   enableOutOfPhaseColor: 0
   outOfPhaseColorStrength: 0.1
   outOfPhaseColor: {r: 0, g: 1, b: 1, a: 1}
-  customDistanceFalloffThreshold: 1
-  customDistanceFalloffPower: 4.95
+  customDistanceFalloffThreshold: 0.21
+  customDistanceFalloffPower: 2.79
   customCookieDistanceFalloffStartThreshold: 0.1
   customCookieDistanceFalloffEndThreshold: 0.25
   customCookieDistanceFalloffPower: 2
@@ -908,8 +908,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f01d29d88278f45458d99e6b5199e920, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 0.35
-  useScattering: 0
+  strength: 4.36
+  useScattering: 1
   overrideScattering: 0
   overridingScattering: 0.5
   scatteringBias: 0
@@ -921,7 +921,7 @@ MonoBehaviour:
   cookieMapRenderTexture: {fileID: 0}
   enableOutOfPhaseColor: 0
   outOfPhaseColorStrength: 0.1
-  outOfPhaseColor: {r: 0, g: 1, b: 1, a: 1}
+  outOfPhaseColor: {r: 0.92361337, g: 0.999999, b: 0.55300164, a: 1}
   customDistanceFalloffThreshold: 0.5
   customDistanceFalloffPower: 2
   customCookieDistanceFalloffStartThreshold: 0.1
@@ -940,12 +940,12 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.11627802, g: 0.3679245, b: 0.35836545, a: 1}
-  m_Intensity: 6.6
+  m_Color: {r: 0, g: 0.037323426, b: 0.21698111, a: 1}
+  m_Intensity: 3.31
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
+  m_CookieSize: 5.86
   m_Shadows:
     m_Type: 1
     m_Resolution: -1
@@ -983,7 +983,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 35.7
+  m_BounceIntensity: 23.32
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -997,13 +997,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486948898}
-  m_LocalRotation: {x: 0.84928244, y: 0.41529873, z: -0.14545523, w: 0.29170048}
-  m_LocalPosition: {x: -15836, y: -12647.7, z: 8904.1}
+  m_LocalRotation: {x: 0.685362, y: 0.65117764, z: -0.051140565, w: 0.32191813}
+  m_LocalPosition: {x: -9748, y: 63840, z: 8911}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 38.045002, y: -179.65201, z: -231.997}
+  m_LocalEulerAnglesHint: {x: 30.522001, y: -203.911, z: -273.682}
 --- !u!114 &486948902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1011,7 +1011,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486948898}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2ec2b96de5640e42a622fc3064f1c80, type: 3}
   m_Name: 
@@ -1037,7 +1037,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &510531603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1357,15 +1357,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_BackGroundColor.r
-      value: 0.10849059
+      value: 0.1981132
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_BackGroundColor.g
-      value: 1
+      value: 0.18222676
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_BackGroundColor.b
-      value: 1
+      value: 0.18222676
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: far clip plane
@@ -11405,12 +11405,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cfuStatus: PSXEffects v1.14 - up to date.
   sections: 01010100
-  customRes: {x: 204, y: 248}
-  resolutionFactor: 5
+  customRes: {x: 340, y: 413}
+  resolutionFactor: 3
   limitFramerate: 48
   skipFrames: 0
   affineMapping: 1
-  polygonalDrawDistance: 5.34
+  polygonalDrawDistance: 1.33
   vertexInaccuracy: 30
   polygonInaccuracy: 2
   colorDepth: 24
@@ -11421,7 +11421,7 @@ MonoBehaviour:
   ditherThreshold: 2.06
   ditherIntensity: 77
   maxDarkness: 69
-  subtractFade: 12
+  subtractFade: 5
   favorRed: 2.36
   worldSpaceSnapping: 1
   postProcessing: 1
@@ -11447,6 +11447,41 @@ MonoBehaviour:
   frustumSettings:
     baseSettings: {fileID: 2003984207}
     qualitySettings: {fileID: 189775359}
+--- !u!114 &1832937537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832937530}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a8c52e585c9d754c9a94fda2eaa0379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mat: {fileID: 2100000, guid: d0aa20c55b2e04a5691e20dcf5a46dde, type: 2}
+  f: 0.09
+--- !u!114 &1832937538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832937530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d947636a9390f6a46a121124154e6e3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Target: {fileID: 1832937531}
+  m_AutoTargetPlayer: 1
+  m_UpdateType: 0
+  m_RotationRange: {x: 0, y: 0}
+  m_FollowSpeed: 1
+  m_SwaySpeed: 0.5
+  m_BaseSwayAmount: 0.5
+  m_TrackingSwayAmount: 0.5
+  m_TrackingBias: 0
 --- !u!114 &2003984207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11460,16 +11495,16 @@ MonoBehaviour:
   m_Name: New Aura Base Settings
   m_EditorClassIdentifier: 
   useDensity: 1
-  density: 0.3
+  density: 0.1
   useScattering: 1
-  scattering: 0.75
+  scattering: 0.266
   useAmbientLighting: 1
   ambientLightingStrength: 1.07
   useColor: 0
   color: {r: 0.0000005066395, g: 0.5, b: 0.5, a: 1}
   colorStrength: 1
   useTint: 1
-  tint: {r: 0.999999, g: 0.6829219, b: 0.6092699, a: 1}
+  tint: {r: 0.999999, g: 0.98181367, b: 0.6493089, a: 1}
   tintStrength: 1
   useExtinction: 1
-  extinction: 0.826
+  extinction: 0.964
