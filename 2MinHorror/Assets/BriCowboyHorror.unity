@@ -21,10 +21,10 @@ RenderSettings:
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.2509804, g: 0.3882353, b: 0.5058824, a: 1}
-  m_AmbientEquatorColor: {r: 0.21568628, g: 0.2509804, b: 0.17254902, a: 1}
-  m_AmbientGroundColor: {r: 0.12941177, g: 0.14117648, b: 0.1254902, a: 1}
+  m_AmbientEquatorColor: {r: 0.17254902, g: 0.26666668, b: 0.34901962, a: 1}
+  m_AmbientGroundColor: {r: 0.07450981, g: 0.11372549, b: 0.14901961, a: 1}
   m_AmbientIntensity: 1.46
-  m_AmbientMode: 0
+  m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 2869c66e822baa941bb52b0e6ec3dfdf, type: 2}
   m_HaloStrength: 0.5
@@ -228,6 +228,277 @@ MonoBehaviour:
   debugOcclusionCulling: 0
   occlusionCullingAccuracy: 0
   enableLightProbes: 0
+--- !u!1 &82554453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 82554455}
+  - component: {fileID: 82554454}
+  m_Layer: 0
+  m_Name: Aura Sphere Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &82554454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82554453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b142c931e4f39c429a012dc68ba0659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeShape:
+    shape: 3
+    fading:
+      falloffExponent: 4.6
+      xPositiveCubeFade: 0.25
+      xNegativeCubeFade: 0.25
+      yPositiveCubeFade: 0.25
+      yNegativeCubeFade: 0.25
+      zPositiveCubeFade: 0.25
+      zNegativeCubeFade: 0.25
+      angularConeFade: 0.5
+      distanceConeFade: 0.5
+      widthCylinderFade: 0.5
+      yNegativeCylinderFade: 0.25
+      yPositiveCylinderFade: 0.25
+      distanceSphereFade: 0.5
+  useAsLightProbesProxyVolume: 0
+  lightProbesMultiplier: 1.53
+  texture2DMask:
+    enable: 0
+    texture: {fileID: 0}
+    textureIndex: -1
+    transform:
+      space: 1
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+  texture3DMask:
+    enable: 0
+    texture: {fileID: 0}
+    textureIndex: -1
+    transform:
+      space: 1
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+  noiseMask:
+    enable: 1
+    speed: 0.125
+    transform:
+      space: 0
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0}
+      scale: {x: 5, y: 5, z: 5}
+  densityInjection:
+    enable: 1
+    strength: 4.21
+    useNoiseMask: 1
+    useNoiseMaskLevels: 1
+    noiseMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 5
+      saturateOutputValues: 0
+    useTexture2DMask: 1
+    useTexture2DMaskLevels: 0
+    texture2DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+    useTexture3DMask: 1
+    useTexture3DMaskLevels: 0
+    texture3DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+  scatteringInjection:
+    enable: 1
+    strength: 2.16
+    useNoiseMask: 1
+    useNoiseMaskLevels: 1
+    noiseMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: -1
+      outputHiValue: 1
+      contrast: 3
+      saturateOutputValues: 0
+    useTexture2DMask: 1
+    useTexture2DMaskLevels: 0
+    texture2DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: -1
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+    useTexture3DMask: 1
+    useTexture3DMaskLevels: 0
+    texture3DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: -1
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+  lightInjection:
+    injectionParameters:
+      enable: 1
+      strength: 1
+      useNoiseMask: 1
+      useNoiseMaskLevels: 1
+      noiseMaskLevelParameters:
+        levelLowThreshold: 0
+        levelHiThreshold: 1
+        outputLowValue: 0
+        outputHiValue: 1
+        contrast: 5
+        saturateOutputValues: 0
+      useTexture2DMask: 1
+      useTexture2DMaskLevels: 0
+      texture2DMaskLevelParameters:
+        levelLowThreshold: 0
+        levelHiThreshold: 1
+        outputLowValue: 0
+        outputHiValue: 1
+        contrast: 1
+        saturateOutputValues: 0
+      useTexture3DMask: 1
+      useTexture3DMaskLevels: 0
+      texture3DMaskLevelParameters:
+        levelLowThreshold: 0
+        levelHiThreshold: 1
+        outputLowValue: 0
+        outputHiValue: 1
+        contrast: 1
+        saturateOutputValues: 0
+    color: {r: 0.6769999, g: 0.999999, b: 0.59624916, a: 1}
+  tintInjection:
+    injectionParameters:
+      enable: 1
+      strength: 1
+      useNoiseMask: 1
+      useNoiseMaskLevels: 1
+      noiseMaskLevelParameters:
+        levelLowThreshold: 0
+        levelHiThreshold: 1
+        outputLowValue: 0
+        outputHiValue: 1
+        contrast: 5
+        saturateOutputValues: 0
+      useTexture2DMask: 1
+      useTexture2DMaskLevels: 0
+      texture2DMaskLevelParameters:
+        levelLowThreshold: 0
+        levelHiThreshold: 1
+        outputLowValue: 0
+        outputHiValue: 1
+        contrast: 1
+        saturateOutputValues: 0
+      useTexture3DMask: 1
+      useTexture3DMaskLevels: 0
+      texture3DMaskLevelParameters:
+        levelLowThreshold: 0
+        levelHiThreshold: 1
+        outputLowValue: 0
+        outputHiValue: 1
+        contrast: 1
+        saturateOutputValues: 0
+    color: {r: 0.999999, g: 0.21557708, b: 0.22806035, a: 1}
+  ambientInjection:
+    enable: 1
+    strength: 2.33
+    useNoiseMask: 1
+    useNoiseMaskLevels: 1
+    noiseMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 5
+      saturateOutputValues: 0
+    useTexture2DMask: 1
+    useTexture2DMaskLevels: 0
+    texture2DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+    useTexture3DMask: 1
+    useTexture3DMaskLevels: 0
+    texture3DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+  boostInjection:
+    enable: 1
+    strength: 1
+    useNoiseMask: 1
+    useNoiseMaskLevels: 1
+    noiseMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 5
+      saturateOutputValues: 0
+    useTexture2DMask: 1
+    useTexture2DMaskLevels: 0
+    texture2DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+    useTexture3DMask: 1
+    useTexture3DMaskLevels: 0
+    texture3DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+--- !u!4 &82554455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82554453}
+  m_LocalRotation: {x: 0, y: 0.93621486, z: 0, w: -0.35142815}
+  m_LocalPosition: {x: 524.8361, y: 2.91, z: 476.54974}
+  m_LocalScale: {x: 11.235705, y: 7.0750685, z: 11.845155}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &115295061
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,7 +1059,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 06e14e2567d994e0b942d2e9ed9c92a7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.163
+      value: -0.08
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 06e14e2567d994e0b942d2e9ed9c92a7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -796,23 +1067,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 06e14e2567d994e0b942d2e9ed9c92a7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.861
+      value: 0.33
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 06e14e2567d994e0b942d2e9ed9c92a7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.5447866
+      value: -0.6968866
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 06e14e2567d994e0b942d2e9ed9c92a7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.04476554
+      value: -0.08227737
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 06e14e2567d994e0b942d2e9ed9c92a7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.020876747
+      value: 0.023457572
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 06e14e2567d994e0b942d2e9ed9c92a7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8371188
+      value: 0.7120599
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 06e14e2567d994e0b942d2e9ed9c92a7, type: 3}
       propertyPath: m_RootOrder
@@ -820,15 +1091,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 06e14e2567d994e0b942d2e9ed9c92a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -81.336006
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 06e14e2567d994e0b942d2e9ed9c92a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -84.22401
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 06e14e2567d994e0b942d2e9ed9c92a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 79.443
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: 06e14e2567d994e0b942d2e9ed9c92a7, type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState
@@ -853,11 +1124,11 @@ MonoBehaviour:
   m_Name: New Aura Base Settings
   m_EditorClassIdentifier: 
   useDensity: 1
-  density: 0.3
+  density: 0.5
   useScattering: 1
-  scattering: 0.75
+  scattering: 1
   useAmbientLighting: 1
-  ambientLightingStrength: 1
+  ambientLightingStrength: 1.25
   useColor: 0
   color: {r: 0, g: 0.5, b: 0.5, a: 0.5}
   colorStrength: 1
@@ -973,7 +1244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f01d29d88278f45458d99e6b5199e920, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 4.36
+  strength: 0.5
   useScattering: 1
   overrideScattering: 0
   overridingScattering: 0.5
@@ -1005,8 +1276,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0, g: 0.037323426, b: 0.21698111, a: 1}
-  m_Intensity: 3.31
+  m_Color: {r: 0.907, g: 1, b: 0.85, a: 1}
+  m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1062,7 +1333,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 486948898}
-  m_LocalRotation: {x: 0.685362, y: 0.65117764, z: -0.051140565, w: 0.32191813}
+  m_LocalRotation: {x: 0.670349, y: 0.58689296, z: -0.17317702, w: 0.41976026}
   m_LocalPosition: {x: -9748, y: 63840, z: 8911}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1086,6 +1357,277 @@ MonoBehaviour:
   m_UpdateType: 0
   m_RotationRange: {x: 0.03, y: 1.59}
   m_FollowSpeed: 1
+--- !u!1 &501766701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 501766703}
+  - component: {fileID: 501766702}
+  m_Layer: 0
+  m_Name: Aura Preset Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &501766702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501766701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b142c931e4f39c429a012dc68ba0659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeShape:
+    shape: 0
+    fading:
+      falloffExponent: 3
+      xPositiveCubeFade: 0.25
+      xNegativeCubeFade: 0.25
+      yPositiveCubeFade: 0.25
+      yNegativeCubeFade: 0.25
+      zPositiveCubeFade: 0.25
+      zNegativeCubeFade: 0.25
+      angularConeFade: 0.5
+      distanceConeFade: 0.5
+      widthCylinderFade: 0.5
+      yNegativeCylinderFade: 0.25
+      yPositiveCylinderFade: 0.25
+      distanceSphereFade: 0.5
+  useAsLightProbesProxyVolume: 0
+  lightProbesMultiplier: 1
+  texture2DMask:
+    enable: 0
+    texture: {fileID: 0}
+    textureIndex: -1
+    transform:
+      space: 1
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+  texture3DMask:
+    enable: 0
+    texture: {fileID: 0}
+    textureIndex: -1
+    transform:
+      space: 1
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+  noiseMask:
+    enable: 1
+    speed: 0.15
+    transform:
+      space: 0
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0}
+      scale: {x: 3, y: 3, z: 3}
+  densityInjection:
+    enable: 1
+    strength: 0.2
+    useNoiseMask: 1
+    useNoiseMaskLevels: 1
+    noiseMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: -1
+      contrast: 15
+      saturateOutputValues: 0
+    useTexture2DMask: 1
+    useTexture2DMaskLevels: 0
+    texture2DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+    useTexture3DMask: 1
+    useTexture3DMaskLevels: 0
+    texture3DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+  scatteringInjection:
+    enable: 0
+    strength: 0.25
+    useNoiseMask: 1
+    useNoiseMaskLevels: 1
+    noiseMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: -1
+      outputHiValue: 1
+      contrast: 3
+      saturateOutputValues: 0
+    useTexture2DMask: 1
+    useTexture2DMaskLevels: 0
+    texture2DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: -1
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+    useTexture3DMask: 1
+    useTexture3DMaskLevels: 0
+    texture3DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: -1
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+  lightInjection:
+    injectionParameters:
+      enable: 0
+      strength: 1
+      useNoiseMask: 1
+      useNoiseMaskLevels: 1
+      noiseMaskLevelParameters:
+        levelLowThreshold: 0
+        levelHiThreshold: 1
+        outputLowValue: 0
+        outputHiValue: 1
+        contrast: 5
+        saturateOutputValues: 0
+      useTexture2DMask: 1
+      useTexture2DMaskLevels: 0
+      texture2DMaskLevelParameters:
+        levelLowThreshold: 0
+        levelHiThreshold: 1
+        outputLowValue: 0
+        outputHiValue: 1
+        contrast: 1
+        saturateOutputValues: 0
+      useTexture3DMask: 1
+      useTexture3DMaskLevels: 0
+      texture3DMaskLevelParameters:
+        levelLowThreshold: 0
+        levelHiThreshold: 1
+        outputLowValue: 0
+        outputHiValue: 1
+        contrast: 1
+        saturateOutputValues: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+  tintInjection:
+    injectionParameters:
+      enable: 1
+      strength: 1
+      useNoiseMask: 1
+      useNoiseMaskLevels: 1
+      noiseMaskLevelParameters:
+        levelLowThreshold: 0
+        levelHiThreshold: 1
+        outputLowValue: 0
+        outputHiValue: 1
+        contrast: 5
+        saturateOutputValues: 0
+      useTexture2DMask: 1
+      useTexture2DMaskLevels: 0
+      texture2DMaskLevelParameters:
+        levelLowThreshold: 0
+        levelHiThreshold: 1
+        outputLowValue: 0
+        outputHiValue: 1
+        contrast: 1
+        saturateOutputValues: 0
+      useTexture3DMask: 1
+      useTexture3DMaskLevels: 0
+      texture3DMaskLevelParameters:
+        levelLowThreshold: 0
+        levelHiThreshold: 1
+        outputLowValue: 0
+        outputHiValue: 1
+        contrast: 1
+        saturateOutputValues: 0
+    color: {r: 0.21044569, g: 0.16249962, b: 0.999999, a: 1}
+  ambientInjection:
+    enable: 0
+    strength: 1
+    useNoiseMask: 1
+    useNoiseMaskLevels: 1
+    noiseMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 5
+      saturateOutputValues: 0
+    useTexture2DMask: 1
+    useTexture2DMaskLevels: 0
+    texture2DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+    useTexture3DMask: 1
+    useTexture3DMaskLevels: 0
+    texture3DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+  boostInjection:
+    enable: 0
+    strength: 1
+    useNoiseMask: 1
+    useNoiseMaskLevels: 1
+    noiseMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 5
+      saturateOutputValues: 0
+    useTexture2DMask: 1
+    useTexture2DMaskLevels: 0
+    texture2DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+    useTexture3DMask: 1
+    useTexture3DMaskLevels: 0
+    texture3DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+--- !u!4 &501766703
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501766701}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &510531602
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,6 +1986,30 @@ PrefabInstance:
       propertyPath: near clip plane
       value: 0.01
       objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_FootstepSounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_FootstepSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9f2a046d9f7bb4f42a40f356abf354ad, type: 3}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_FootstepSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: cdee69e32a02c294fad9f7b957a1f366, type: 3}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_FootstepSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: f167b38e9e289a449a7158aea4aaded4, type: 3}
+    - target: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_LandSound
+      value: 
+      objectReference: {fileID: 8300000, guid: f167b38e9e289a449a7158aea4aaded4, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
 --- !u!1 &592097583
@@ -6419,6 +6985,277 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1174475907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1174475909}
+  - component: {fileID: 1174475908}
+  m_Layer: 0
+  m_Name: Aura Sphere Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1174475908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174475907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b142c931e4f39c429a012dc68ba0659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeShape:
+    shape: 3
+    fading:
+      falloffExponent: 3
+      xPositiveCubeFade: 0.25
+      xNegativeCubeFade: 0.25
+      yPositiveCubeFade: 0.25
+      yNegativeCubeFade: 0.25
+      zPositiveCubeFade: 0.25
+      zNegativeCubeFade: 0.25
+      angularConeFade: 0.5
+      distanceConeFade: 0.5
+      widthCylinderFade: 0.5
+      yNegativeCylinderFade: 0.25
+      yPositiveCylinderFade: 0.25
+      distanceSphereFade: 0.5
+  useAsLightProbesProxyVolume: 0
+  lightProbesMultiplier: 1
+  texture2DMask:
+    enable: 0
+    texture: {fileID: 0}
+    textureIndex: -1
+    transform:
+      space: 1
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+  texture3DMask:
+    enable: 0
+    texture: {fileID: 0}
+    textureIndex: -1
+    transform:
+      space: 1
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+  noiseMask:
+    enable: 0
+    speed: 0.125
+    transform:
+      space: 0
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0}
+      scale: {x: 5, y: 5, z: 5}
+  densityInjection:
+    enable: 1
+    strength: 5
+    useNoiseMask: 1
+    useNoiseMaskLevels: 1
+    noiseMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 5
+      saturateOutputValues: 0
+    useTexture2DMask: 1
+    useTexture2DMaskLevels: 0
+    texture2DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+    useTexture3DMask: 1
+    useTexture3DMaskLevels: 0
+    texture3DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+  scatteringInjection:
+    enable: 0
+    strength: 0.25
+    useNoiseMask: 1
+    useNoiseMaskLevels: 1
+    noiseMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: -1
+      outputHiValue: 1
+      contrast: 3
+      saturateOutputValues: 0
+    useTexture2DMask: 1
+    useTexture2DMaskLevels: 0
+    texture2DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: -1
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+    useTexture3DMask: 1
+    useTexture3DMaskLevels: 0
+    texture3DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: -1
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+  lightInjection:
+    injectionParameters:
+      enable: 0
+      strength: 1
+      useNoiseMask: 1
+      useNoiseMaskLevels: 1
+      noiseMaskLevelParameters:
+        levelLowThreshold: 0
+        levelHiThreshold: 1
+        outputLowValue: 0
+        outputHiValue: 1
+        contrast: 5
+        saturateOutputValues: 0
+      useTexture2DMask: 1
+      useTexture2DMaskLevels: 0
+      texture2DMaskLevelParameters:
+        levelLowThreshold: 0
+        levelHiThreshold: 1
+        outputLowValue: 0
+        outputHiValue: 1
+        contrast: 1
+        saturateOutputValues: 0
+      useTexture3DMask: 1
+      useTexture3DMaskLevels: 0
+      texture3DMaskLevelParameters:
+        levelLowThreshold: 0
+        levelHiThreshold: 1
+        outputLowValue: 0
+        outputHiValue: 1
+        contrast: 1
+        saturateOutputValues: 0
+    color: {r: 1, g: 1, b: 1, a: 1}
+  tintInjection:
+    injectionParameters:
+      enable: 1
+      strength: 1
+      useNoiseMask: 1
+      useNoiseMaskLevels: 1
+      noiseMaskLevelParameters:
+        levelLowThreshold: 0
+        levelHiThreshold: 1
+        outputLowValue: 0
+        outputHiValue: 1
+        contrast: 5
+        saturateOutputValues: 0
+      useTexture2DMask: 1
+      useTexture2DMaskLevels: 0
+      texture2DMaskLevelParameters:
+        levelLowThreshold: 0
+        levelHiThreshold: 1
+        outputLowValue: 0
+        outputHiValue: 1
+        contrast: 1
+        saturateOutputValues: 0
+      useTexture3DMask: 1
+      useTexture3DMaskLevels: 0
+      texture3DMaskLevelParameters:
+        levelLowThreshold: 0
+        levelHiThreshold: 1
+        outputLowValue: 0
+        outputHiValue: 1
+        contrast: 1
+        saturateOutputValues: 0
+    color: {r: 0.999999, g: 0.31608185, b: 0.2661086, a: 1}
+  ambientInjection:
+    enable: 0
+    strength: 1
+    useNoiseMask: 1
+    useNoiseMaskLevels: 1
+    noiseMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 5
+      saturateOutputValues: 0
+    useTexture2DMask: 1
+    useTexture2DMaskLevels: 0
+    texture2DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+    useTexture3DMask: 1
+    useTexture3DMaskLevels: 0
+    texture3DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+  boostInjection:
+    enable: 0
+    strength: 1
+    useNoiseMask: 1
+    useNoiseMaskLevels: 1
+    noiseMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 5
+      saturateOutputValues: 0
+    useTexture2DMask: 1
+    useTexture2DMaskLevels: 0
+    texture2DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+    useTexture3DMask: 1
+    useTexture3DMaskLevels: 0
+    texture3DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+--- !u!4 &1174475909
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174475907}
+  m_LocalRotation: {x: 0, y: -0.8076771, z: 0, w: 0.58962506}
+  m_LocalPosition: {x: 525.485, y: 3.5205803, z: 476.1294}
+  m_LocalScale: {x: 4.2788863, y: 2.5772789, z: 4.2788863}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1355283128
 GameObject:
   m_ObjectHideFlags: 0
@@ -6435,7 +7272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1355283129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6689,6 +7526,277 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1463877192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1463877194}
+  - component: {fileID: 1463877193}
+  m_Layer: 0
+  m_Name: Aura Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1463877193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463877192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b142c931e4f39c429a012dc68ba0659, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeShape:
+    shape: 0
+    fading:
+      falloffExponent: 3
+      xPositiveCubeFade: 0.25
+      xNegativeCubeFade: 0.25
+      yPositiveCubeFade: 0.25
+      yNegativeCubeFade: 0.25
+      zPositiveCubeFade: 0.25
+      zNegativeCubeFade: 0.25
+      angularConeFade: 0.5
+      distanceConeFade: 0.5
+      widthCylinderFade: 0.5
+      yNegativeCylinderFade: 0.25
+      yPositiveCylinderFade: 0.25
+      distanceSphereFade: 0.5
+  useAsLightProbesProxyVolume: 1
+  lightProbesMultiplier: 1
+  texture2DMask:
+    enable: 0
+    texture: {fileID: 0}
+    textureIndex: -1
+    transform:
+      space: 1
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+  texture3DMask:
+    enable: 0
+    texture: {fileID: 0}
+    textureIndex: -1
+    transform:
+      space: 1
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+  noiseMask:
+    enable: 1
+    speed: 0.125
+    transform:
+      space: 0
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0}
+      scale: {x: 5, y: 5, z: 5}
+  densityInjection:
+    enable: 1
+    strength: -0.29
+    useNoiseMask: 1
+    useNoiseMaskLevels: 1
+    noiseMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 5
+      saturateOutputValues: 0
+    useTexture2DMask: 1
+    useTexture2DMaskLevels: 0
+    texture2DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+    useTexture3DMask: 1
+    useTexture3DMaskLevels: 0
+    texture3DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+  scatteringInjection:
+    enable: 1
+    strength: 1.93
+    useNoiseMask: 1
+    useNoiseMaskLevels: 1
+    noiseMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: -1
+      outputHiValue: 1
+      contrast: 3
+      saturateOutputValues: 0
+    useTexture2DMask: 1
+    useTexture2DMaskLevels: 0
+    texture2DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: -1
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+    useTexture3DMask: 1
+    useTexture3DMaskLevels: 0
+    texture3DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: -1
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+  lightInjection:
+    injectionParameters:
+      enable: 0
+      strength: 1
+      useNoiseMask: 1
+      useNoiseMaskLevels: 1
+      noiseMaskLevelParameters:
+        levelLowThreshold: 0
+        levelHiThreshold: 1
+        outputLowValue: 0
+        outputHiValue: 1
+        contrast: 5
+        saturateOutputValues: 0
+      useTexture2DMask: 1
+      useTexture2DMaskLevels: 0
+      texture2DMaskLevelParameters:
+        levelLowThreshold: 0
+        levelHiThreshold: 1
+        outputLowValue: 0
+        outputHiValue: 1
+        contrast: 1
+        saturateOutputValues: 0
+      useTexture3DMask: 1
+      useTexture3DMaskLevels: 0
+      texture3DMaskLevelParameters:
+        levelLowThreshold: 0
+        levelHiThreshold: 1
+        outputLowValue: 0
+        outputHiValue: 1
+        contrast: 1
+        saturateOutputValues: 0
+    color: {r: 0.47123858, g: 0.29605657, b: 0.999999, a: 1}
+  tintInjection:
+    injectionParameters:
+      enable: 1
+      strength: 1
+      useNoiseMask: 1
+      useNoiseMaskLevels: 1
+      noiseMaskLevelParameters:
+        levelLowThreshold: 0
+        levelHiThreshold: 1
+        outputLowValue: 0
+        outputHiValue: 1
+        contrast: -0.14
+        saturateOutputValues: 0
+      useTexture2DMask: 1
+      useTexture2DMaskLevels: 0
+      texture2DMaskLevelParameters:
+        levelLowThreshold: 0
+        levelHiThreshold: 1
+        outputLowValue: 0
+        outputHiValue: 1
+        contrast: 1
+        saturateOutputValues: 0
+      useTexture3DMask: 1
+      useTexture3DMaskLevels: 0
+      texture3DMaskLevelParameters:
+        levelLowThreshold: 0
+        levelHiThreshold: 1
+        outputLowValue: 0
+        outputHiValue: 1
+        contrast: 1
+        saturateOutputValues: 0
+    color: {r: 0.86431617, g: 0.19366406, b: 0.999999, a: 1}
+  ambientInjection:
+    enable: 1
+    strength: 1
+    useNoiseMask: 1
+    useNoiseMaskLevels: 1
+    noiseMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 5
+      saturateOutputValues: 0
+    useTexture2DMask: 1
+    useTexture2DMaskLevels: 0
+    texture2DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+    useTexture3DMask: 1
+    useTexture3DMaskLevels: 0
+    texture3DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+  boostInjection:
+    enable: 0
+    strength: 1
+    useNoiseMask: 1
+    useNoiseMaskLevels: 1
+    noiseMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 5
+      saturateOutputValues: 0
+    useTexture2DMask: 1
+    useTexture2DMaskLevels: 0
+    texture2DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+    useTexture3DMask: 1
+    useTexture3DMaskLevels: 0
+    texture3DMaskLevelParameters:
+      levelLowThreshold: 0
+      levelHiThreshold: 1
+      outputLowValue: 0
+      outputHiValue: 1
+      contrast: 1
+      saturateOutputValues: 0
+--- !u!4 &1463877194
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463877192}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 525.3981, y: 2.2804966, z: 475.76767}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1522137992
 PrefabInstance:
@@ -11533,7 +12641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cfuStatus: PSXEffects v1.14 - up to date.
   sections: 01010100
-  customRes: {x: 457, y: 190}
+  customRes: {x: 172, y: 151}
   resolutionFactor: 3
   limitFramerate: 48
   skipFrames: 0
@@ -11623,11 +12731,11 @@ MonoBehaviour:
   m_Name: New Aura Base Settings
   m_EditorClassIdentifier: 
   useDensity: 1
-  density: 0.1
+  density: 0.5
   useScattering: 1
-  scattering: 0.266
+  scattering: 1
   useAmbientLighting: 1
-  ambientLightingStrength: 1.07
+  ambientLightingStrength: 1.25
   useColor: 0
   color: {r: 0.0000005066395, g: 0.5, b: 0.5, a: 1}
   colorStrength: 1
