@@ -8,6 +8,8 @@ public class FollowMe : MonoBehaviour
     public Transform mTarget;
     private float mSpeed;
     private const float EPSILON = 0.1f;
+    private bool hasTutorial;
+    private bool recentWhistle; 
     
     //private int Speed;
     public bool followingPlayer; 
@@ -16,7 +18,10 @@ public class FollowMe : MonoBehaviour
     void Start()
     {
         followingPlayer = false;
-        mSpeed = 1.4f; 
+        mSpeed = 1.4f;
+        hasTutorial = false;
+        recentWhistle = false;
+
     }
 
     // Update is called once per frame
@@ -55,6 +60,39 @@ public class FollowMe : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        throw new NotImplementedException();
+        if (!hasTutorial)
+        {
+            StartCoroutine(TutorialText());
+        }
     }
+
+    IEnumerator TutorialText()
+    {
+        hasTutorial = true;
+        yield return new WaitForSeconds(1f);
+        ServiceLocator._subtitleTiming.subtitle.text = "goats will follow you when you whistle. press 'e' to whistle''";
+        //try to get the press 'e' to be on a new line 
+        yield return new WaitForSeconds(2.5f);
+        ServiceLocator._subtitleTiming.subtitle.text = ""; 
+
+    }
+    
+    
+    public void CheckWhistleRange()
+    {
+        
+    } 
+
+   public void OnTriggerStay(Collider other)
+   {
+       if (other.tag == "Player")
+       {
+           if (Input.GetKeyDown(KeyCode.E))
+           {
+               //add sound
+               Debug.Log("whistle sound");
+               followingPlayer = true;
+           }
+       }
+   }
 }

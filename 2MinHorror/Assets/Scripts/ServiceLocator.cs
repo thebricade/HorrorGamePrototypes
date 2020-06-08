@@ -2,17 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ServiceLocator : MonoBehaviour
+public class ServiceLocator
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static Game _game;
+    public static SubtitleTiming _subtitleTiming;
+    public static GameObject _Goat1, _Goat2; 
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

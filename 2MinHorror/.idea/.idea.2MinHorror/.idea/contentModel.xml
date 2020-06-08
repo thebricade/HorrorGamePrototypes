@@ -1584,6 +1584,7 @@
             <e p="TextTagParserTests.cs" t="Include" />
           </e>
         </e>
+        <e p="whistle.cs" t="Include" />
         <e p="Wonky" t="Include">
           <e p="ScanlinesEffect" t="Include">
             <e p="Script" t="Include">
