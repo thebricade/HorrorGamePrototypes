@@ -1515,6 +1515,7 @@
             </e>
           </e>
         </e>
+        <e p="StopTheGoat.cs" t="Include" />
         <e p="Stylizer" t="Include">
           <e p="Editor" t="Include">
             <e p="BeffioDitherEditorUtilities.cs" t="Include" />

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class FollowMe : MonoBehaviour
@@ -9,7 +10,8 @@ public class FollowMe : MonoBehaviour
     private float mSpeed;
     private const float EPSILON = 0.1f;
     private bool hasTutorial;
-    private bool recentWhistle; 
+    private bool recentWhistle;
+    public Animator myGoatBody; 
     
     //private int Speed;
     public bool followingPlayer; 
@@ -64,6 +66,7 @@ public class FollowMe : MonoBehaviour
         {
             StartCoroutine(TutorialText());
         }
+        
     }
 
     IEnumerator TutorialText()
@@ -76,12 +79,14 @@ public class FollowMe : MonoBehaviour
         ServiceLocator._subtitleTiming.subtitle.text = ""; 
 
     }
-    
-    
-    public void CheckWhistleRange()
+
+    IEnumerator StopFollowing()
     {
-        
-    } 
+        yield return new WaitForSeconds(2.5f);
+        followingPlayer = false;
+
+    }
+    
 
    public void OnTriggerStay(Collider other)
    {
@@ -91,8 +96,12 @@ public class FollowMe : MonoBehaviour
            {
                //add sound
                Debug.Log("whistle sound");
+               
                followingPlayer = true;
+               myGoatBody.Play("Walking");
            }
        }
+
+    
    }
 }
