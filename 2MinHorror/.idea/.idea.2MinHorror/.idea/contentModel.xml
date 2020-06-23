@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\Bri\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Bri\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_2MinHorror.-2020305748.00" t="ExcludeRecursive" />
-    <e p="D:\HorrorGames\HorrorGamePrototypes\2MinHorror" t="IncludeRecursive">
+    <e p="C:\Users\Bri\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_2MinHorror.-1708328965.00" t="ExcludeRecursive" />
+    <e p="D:\Game Dev\HorrorGames\HorrorGamePrototypes\2MinHorror" t="IncludeRecursive">
       <e p="2MinHorror.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
@@ -1276,6 +1276,7 @@
         <e p="Scripts" t="Include">
           <e p="FollowMe.cs" t="Include" />
           <e p="Game.cs" t="Include" />
+          <e p="InvisibleWall.cs" t="Include" />
           <e p="ServiceLocator.cs" t="Include" />
           <e p="SubtitleTiming.cs" t="Include" />
         </e>

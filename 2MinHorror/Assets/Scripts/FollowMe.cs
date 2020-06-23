@@ -46,9 +46,11 @@ public class FollowMe : MonoBehaviour
             {
                 transform.Translate(0f,0f,mSpeed*Time.deltaTime);
             }
+
             
-            
-            
+
+
+
             /*transform.LookAt(mTarget.position);
             if ((transform.position - mTarget.position).magnitude > EPSILON)
             {
@@ -99,9 +101,15 @@ public class FollowMe : MonoBehaviour
                
                followingPlayer = true;
                myGoatBody.Play("Walking");
+               StartCoroutine(GoatStopFollowing()); 
            }
        }
+   }
 
-    
+   IEnumerator GoatStopFollowing()
+   {
+       yield return new WaitForSeconds(6.5f);
+       followingPlayer = false; 
+       myGoatBody.Play("idle");
    }
 }

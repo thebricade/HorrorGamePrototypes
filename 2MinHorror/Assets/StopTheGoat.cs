@@ -20,6 +20,7 @@ public class StopTheGoat : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("I hit something");
+        Debug.Log(other.name.ToString());
         if (other.name == "Goat1_Body")
         {
             ServiceLocator._Goat1.GetComponent<FollowMe>().followingPlayer = false; 
@@ -30,5 +31,11 @@ public class StopTheGoat : MonoBehaviour
             ServiceLocator._Goat2.GetComponent<FollowMe>().followingPlayer = false; 
             Debug.Log("goat 2 stop");
         } 
+    }
+
+
+    private void OnCollisionEnter(Collision other)
+    {
+        Debug.Log("There was a collision");
     }
 }
