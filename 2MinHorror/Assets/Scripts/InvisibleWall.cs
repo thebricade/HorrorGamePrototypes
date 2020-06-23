@@ -5,13 +5,23 @@ using UnityEngine;
 
 public class InvisibleWall : MonoBehaviour
 {
-    public GameObject GoatBodies, CreepySound, BackgroundNoise; 
+    private AudioSource[] allAudioSources;
+    public GameObject GoatBodies, CreepySound;
+
+    private void Start()
+    {
+        allAudioSources = FindObjectsOfType(typeof(AudioSource)) as AudioSource[]; 
+        
+    }
 
     public void OnTriggerExit(Collider other)
     {
         gameObject.GetComponent<BoxCollider>().isTrigger = false; 
         GoatBodies.SetActive(true);
-        BackgroundNoise.SetActive(false);
+        foreach (var audio in allAudioSources)
+        {
+            audio.Stop();
+        }
         CreepySound.SetActive(true);
     }
 }
